@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fbfbfb">
+  <title>Spider-Verse — Text Reveal</title>
+  <link rel="preload" href="assets/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <script src="timeline.js" defer></script>
+  <script src="settings.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="stage relative" aria-label="Spider-Verse inspired text animation">
+    <p class="sr-only absolute overflow-hidden">And a lean, silent figure slowly fades into the gathering darkness, aware at last that in this world, with great power there must also come... great responsibility!</p>
+    <div id="passage" class="passage relative" aria-hidden="true"></div>
+  </main>
+  <nav class="controls fixed" aria-label="Animation playback">
+    <button id="tune" type="button" aria-expanded="false" aria-controls="settings-panel">参数</button>
+    <button id="pause" type="button">Pause</button>
+    <button id="replay" type="button">Replay</button>
+  </nav>
+  <aside id="settings-panel" class="settings-panel fixed overflow-clip" aria-label="样式与动效参数" hidden>
+    <header class="panel-header">
+      <h1>样式与动效</h1>
+      <button id="close-settings" type="button" aria-label="关闭参数面板">关闭</button>
+    </header>
+    <form id="settings-form" class="settings-form overflow-y-auto"></form>
+    <footer class="panel-footer">
+      <button id="reset-settings" type="button">恢复视频默认值</button>
+      <span id="settings-status" role="status">修改自动保存在本机</span>
+    </footer>
+  </aside>
+</body>
+</html>
